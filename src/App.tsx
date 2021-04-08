@@ -1,25 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import BasicForm from './components/BasicForm';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import ThirdForm from './components/ThirdForm';
+import IncomeForm from './components/IncomeForm';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router>
+    <div className="container">
+      <Switch>
+          <Route exact path="/" component={BasicForm} />
+          <Route exact path="/second_form" component={IncomeForm} />
+          <Route exact path="/third_form" component={ThirdForm} />
+        </Switch>
+      {/* <BasicForm /> */}
     </div>
+    </Router>
   );
 }
 
