@@ -6,8 +6,10 @@ const Input = (props: {label: string, type: string, placeholder: string, name: s
 
     return (
         <div className="field">
-            <label className="label"> {label} </label>
-            <div className="control">
+            <div className="block">
+                <label className="label"> {label} </label>
+            </div>
+            <div className="control block">
                 <input className="input is-primary" type={type} name={name} placeholder={placeholder} onChange={(e) => onChange(e.target.value)} />
             </div>
         </div>

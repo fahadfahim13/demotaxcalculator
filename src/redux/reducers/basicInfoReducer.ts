@@ -13,6 +13,7 @@ const init: BasicInfoType = {
 const basicInfoReducer = (state = init, action: BasicInfoActionType): BasicInfoType => {
     switch (action.type) {
         case SET_BASIC_INFO:
+            console.log("Basic Info: ", action.payload);
             return action.payload
     
         default:

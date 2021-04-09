@@ -8,6 +8,7 @@ const init: BasicIncomeType = {
 const incomeReducer = (state = init, action: BasicIncomeActionType): BasicIncomeType => {
     switch (action.type) {
         case SET_INCOME:
+            console.log("Income Info: ", action.payload);
             return action.payload
     
         default:
