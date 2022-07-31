@@ -17,7 +17,7 @@ const Admin = () => {
                                 <label className="label">Login to Admin Panel</label>
                                 <input className={state==='khulja-sim-sim'?"input is-primary":"input is-danger"} 
                                 type="password" placeholder="Your Password" onChange={(e) => setstate(e.target.value)} />
-                                  <p className="help">Enter Your Secret Password</p>
+                                  <p className="help">Enter Your Secret Password (khulja-sim-sim)</p>
                             </div>
                             <div className="block">
                                 <Link to={state==='khulja-sim-sim'?"/admin/users":"/error"}>
